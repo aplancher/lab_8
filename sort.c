@@ -51,7 +51,7 @@ void mergeSort(int pData[], int l, int r){
 		}
 		i=0;
 		j=0;
-		k=0;
+		k=1;
 
 		while(i<n1 && j<n2){
 			if(L[i]<=R[j]){
@@ -66,6 +66,11 @@ void mergeSort(int pData[], int l, int r){
 		while(i<n1){
 			pData[k]=L[i];
 			i++;
+			k++;
+		}
+		while(j<n2){
+			pData[k]=R[j];
+			j++;
 			k++;
 		}
 
